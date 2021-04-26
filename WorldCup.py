@@ -81,7 +81,6 @@ def generate_batch():
     return x, y
 
 
-# Source: https://github.com/aymericdamien/TensorFlow-Examples/blob/master/examples/2_BasicModels/logistic_regression.py
 X = tf.placeholder(dtype=tf.float32, shape=[None, num_input])
 Y = tf.placeholder(dtype=tf.float32, shape=[None, num_output])
 
@@ -108,7 +107,7 @@ def neural_net(x):
     return out_layer
 
 
-# Construct model
+# Build model
 logits = neural_net(X)
 prediction = tf.nn.softmax(logits)
 
